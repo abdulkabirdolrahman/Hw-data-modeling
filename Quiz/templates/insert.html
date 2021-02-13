@@ -1,0 +1,33 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<br>
+<br>
+<div class="mt">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="touch">
+          <div class="card text-left">
+            <div class="card-body">
+              <h3 class="text-center"> ADD DATA</h3>
+              <form action='/insert' method="POST">
+                <div class="card-body">
+                  <div class="form-group col-sm-12">
+                    <label>Title :</label><input placeholder="Title | ชื่อหนังสือ" type="text" class="form-control" name="title" />
+                    <label>Author :</label><input placeholder="Author | ชื่อผู้แต่ง" type="text" class="form-control" name="author" />
+                    <label>Genre :</label><input placeholder="Genre | ประเภทหนังสือ" type="text" class="form-control" name="genre" />
+                    <label>Height :</label><input placeholder="Height | ขนาดของหนังสือ" type="integer" class="form-control" name="height" />
+                    <label>Publisher :</label><input placeholder = "Publisher | สำนักพิมพ์" type="text" class="form-control" name="publisher" />
+                    <input type="submit" class="btn btn-success mr-2" value="เพิ่มข้อมูล"/>
+                  </div>
+                </div>
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

@@ -1,0 +1,43 @@
+{% extends 'base_layout.html' %}
+
+{% block body %}
+<br>
+<br>
+<div class="mt">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="touch">
+                <div class="card text-left">
+                    <div class="card-body">
+                        <form action='' method="POST">
+                            <h4 class= text-center>แก้ไขข้อมูล</h4>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <h4>Title:</h4>
+                                    <input type="text" placeholder="Title | ชื่อหนังสือ" class="form-control" name="title" value="{{ book.title }}" />
+                                    <h4>Author:</h4>
+                                    <input type="text" placeholder="Author | ชื่อผู้แต่ง" class="form-control" name="author"value="{{ book.author }}" />
+                                    <h4>Genre:</h4>
+                                    <input type="text" placeholder="Genre | ประเภทหนังสือ"  class="form-control" name="genre" value="{{ book.genre }}" />
+                                    <h4>Height:</h4>
+                                    <input type="integer" placeholder="Height | ขนาดของหนังสือ" class="form-control" name="height"value="{{ book.height }}" />
+                                    <h4>Publisher:</h4>
+                                    <input type="text" placeholder = "Publisher | สำนักพิมพ์" class="form-control" name="publisher"value="{{ book.publisher }}" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <div class="btn-group pt-3">
+                                    <input type="submit" class="btn btn-success mr-2" value="อัพเดต" />
+                                    <a href="/" class="btn btn-primary">ย้อนกลับ  <i class="fas fa-arrow-circle-left"></i></a>                          
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock body %}
